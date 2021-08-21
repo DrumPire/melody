@@ -7,6 +7,19 @@ $(document).ready(function () {
   const modal = $('.modal');
   const modalCloseButton = $('.modal-close-button');
   const viewFlatsButton = $('.view-flats');
+  const openMobileMenu = $('.open-mobile-menu');
+  const closeMobileMenu = $('.close-mobile-menu');
+  const mobileMenu = $('.mobile-nav');
+
+  openMobileMenu.on('click', function () {
+    mobileMenu.addClass('active');
+    $('.counter-arrow-down').hide();
+  });
+
+  closeMobileMenu.on('click', function () {
+    mobileMenu.removeClass('active');
+    $('.counter-arrow-down').show();
+  });
 
   floorPath.on('mouseover', function () {
     floorPath.removeClass('current-floor');
